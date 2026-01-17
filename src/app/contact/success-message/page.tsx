@@ -1,9 +1,14 @@
+'use client'
+
+import ThemeSwitcher from "@/src/components/themes/ThemeSwitcher"
 import Link from "next/link"
 
 export default function SuccessMessagePage() {
   return (
     <div className="min-h-screen bg-white dark:bg-zinc-950 flex items-center justify-center px-6">
       <div className="max-w-2xl mx-auto text-center">
+        <ThemeSwitcher />
+        
         <div className="mb-8">
           <svg 
             className="w-20 h-20 mx-auto text-green-500 dark:text-green-400" 

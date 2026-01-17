@@ -1,3 +1,6 @@
+'use client'
+
+import ThemeSwitcher from "@/src/components/themes/ThemeSwitcher"
 import Link from "next/link"
 
 /* 
@@ -9,6 +12,8 @@ import Link from "next/link"
 export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-zinc-950 py-20 px-6">
+      <ThemeSwitcher />
+
       <div className="max-w-6xl mx-auto">
         <Link 
           href="/"
