@@ -19,7 +19,7 @@ export default function ProjectsPage() {
           </svg>
           Home Page
         </Link>
-        
+
         <h1 className="text-4xl md:text-5xl font-bold text-zinc-900 dark:text-zinc-50 mb-4">
           My Projects
         </h1>
@@ -40,14 +40,17 @@ export default function ProjectsPage() {
                 A blog app I created as my very first project as an assignment during my time in Western Sydney University.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-3 py-1 text-sm bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full">
+                <span className="px-3 py-1 text-sm bg-blue-200 dark:bg-blue-800 text-blue-700 dark:text-blue-200 rounded-full">
                   React
                 </span>
-                <span className="px-3 py-1 text-sm bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full">
-                  Next.js
+                <span className="px-3 py-1 text-sm bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full">
+                  Prisma
                 </span>
-                <span className="px-3 py-1 text-sm bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full">
+                <span className="px-3 py-1 text-sm bg-blue-100 dark:bg-blue-900/30 text-blue-500 dark:text-blue-300 rounded-full">
                   Postgres
+                </span>
+                <span className="px-3 py-1 text-sm bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-full">
+                  Tailwind CSS
                 </span>
               </div>
               <div className="flex gap-4">
@@ -85,8 +88,17 @@ export default function ProjectsPage() {
                 <span className="px-3 py-1 text-sm bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 rounded-full">
                   TypeScript
                 </span>
-                <span className="px-3 py-1 text-sm bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 rounded-full">
-                  Node.js
+                <span className="px-3 py-1 text-sm bg-blue-200 dark:bg-blue-800 text-blue-700 dark:text-blue-200 rounded-full">
+                  React
+                </span>
+                <span className="px-3 py-1 text-sm bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full">
+                  Prisma
+                </span>
+                <span className="px-3 py-1 text-sm bg-blue-100 dark:bg-blue-900/30 text-blue-500 dark:text-blue-300 rounded-full">
+                  Postgres
+                </span>
+                <span className="px-3 py-1 text-sm bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-full">
+                  Tailwind CSS
                 </span>
               </div>
               <div className="flex gap-4">
