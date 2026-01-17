@@ -1,10 +1,11 @@
 "use client"
 
 import Link from "next/link"
-import { FormEvent, useState } from "react"
-import getBaseUrl from "@/src/utils/getBaseUrl"
+
 /* 
  * TODO:
+ * 
+ * 
  * 
  * Notes:
  * 
@@ -13,36 +14,6 @@ import getBaseUrl from "@/src/utils/getBaseUrl"
  */
 
 export default function ContactPage() {
-  const [name, setName] = useState<string>('')
-  const [email, setEmail] = useState<string>('')
-  const [message, setMessage] = useState<string>('')
-  const [responseMessage, setResponseMessage] = useState<string>('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
-  const handleSubmit = async(e: FormEvent) => {
-    try {
-      e.preventDefault()
-      setIsSubmitting(true)
-
-      const res = await fetch(`${getBaseUrl()}/api/jotform`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, email, message }),
-      })
-
-      if(!res.ok) setResponseMessage('Something went wrong with the API')
-
-      const body = await res.json()
-      setResponseMessage(body.responseMessage)
-    } catch(e) {
-      console.error('Unexpected error: ', e)
-      setResponseMessage(`Unexpected error: ${e}`)
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
 
   return (
     <>
@@ -103,65 +74,14 @@ export default function ContactPage() {
             </Link>
           </div>
 
-          {/* Contact Form */}
-          {responseMessage ? (
-            <div>
-              {responseMessage}
-            </div>
-          ) : (
-            <div className="bg-zinc-50 dark:bg-zinc-900 rounded-lg p-8 mb-12">
-              <form className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-zinc-900 dark:text-zinc-50 mb-2">
-                    Name/Company
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    onChange={(e) => setName(e.target.value)}
-                    className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
-                    placeholder="Your/Company Name"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-zinc-900 dark:text-zinc-50 mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
-                    placeholder="Your_Email@example.com"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-zinc-900 dark:text-zinc-50 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={6}
-                    onChange={(e) => setMessage(e.target.value)}
-                    className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition resize-none"
-                    placeholder="Regarding the opportunity..."
-                  />
-                </div>
-                
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  onClick={handleSubmit}
-                  className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
-                >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                </button>
-              </form>
-            </div>
-          )}
-          
+          {/* In-Website Contact Form -> Jotform */}
+          <div className="bg-zinc-50 dark:bg-zinc-900 rounded-lg p-8 mb-12 shadow-lg">
+            <iframe 
+              src="https://form.jotform.com/260161955490055"
+              className="w-full min-h-[600px] border-0 rounded-lg bg-zinc-900"
+              title="Contact Form"
+            />
+          </div>
         </div>
       </div>
     </>
