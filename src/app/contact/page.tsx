@@ -1,5 +1,6 @@
 "use client"
 
+import ThemeSwitcher from "@/src/components/themes/ThemeSwitcher"
 import Link from "next/link"
 
 /* 
@@ -19,6 +20,8 @@ export default function ContactPage() {
     <>
       <div className="min-h-screen bg-white dark:bg-zinc-950 py-20 px-6">
         <div className="max-w-4xl mx-auto">
+          <ThemeSwitcher />
+          
           <Link 
             href="/"
             className="inline-flex items-center gap-2 text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors mb-8"
