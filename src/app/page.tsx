@@ -20,21 +20,16 @@ export default function Home() {
           <span className="text-4xl">{' '}/kɑːrr.θɪk/</span>
           </h1>
           <p className="text-xl md:text-2xl text-zinc-600 dark:text-zinc-400 mb-8 max-w-2xl">
-          Full Stack Developer crafting beautiful and functional web experiences
+          Full Stack Developer, always aiming to elevate mobile and web app experiences
           </p>
 
           {/* About Section */}
           <div className="mb-8 max-w-3xl">
             <p className="text-lg text-zinc-700 dark:text-zinc-300 mb-4">
-              Hey, I am Kartik Murti<span className="italic"> --pronunciation on top if that helps :)</span>
+              I believe that hard-work will always reward you, it may take time, but it will never betray you.
             </p>
             <p className="text-lg text-zinc-700 dark:text-zinc-300 mb-4">
-              I believe that hard-work will always reward you, maybe not with what 
-              you wanted or when you wanted it, but it will give you 
-              what you <span className="font-bold">NEED</span>, when you <span className="font-bold">NEED</span> it.
-            </p>
-            <p className="text-lg text-zinc-700 dark:text-zinc-300 mb-4">
-              As of now, I am an ICT graduate from <span className="font-semibold">Western Sydney University</span> with a major in Multimedia Computing. 
+              As of now, I am a Bachelor of Information and Communications Technology from <span className="font-semibold">Western Sydney University</span> with a major in Multimedia Computing. 
               Experienced in building industry-standard web and mobile applications using modern technologies like 
               <span className="text-blue-600 dark:text-blue-400"> React, Next.js, Node.js,</span> and 
               <span className="text-blue-600 dark:text-blue-400"> PostgreSQL</span>.
