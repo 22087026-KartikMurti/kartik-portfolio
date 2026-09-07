@@ -113,6 +113,8 @@ export default function ProjectsPage() {
                 <Link 
                   href="https://ai-lifehub.xyz" 
                   className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   View Project →
                 </Link>
