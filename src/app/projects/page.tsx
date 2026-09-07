@@ -89,6 +89,9 @@ export default function ProjectsPage() {
               <p className="text-zinc-600 dark:text-zinc-400 mb-4">
                 Simple task manager with CRUD operations integrated with AI with the aim of having a JARVIS-like (From Iron-Man) assistant for managing tasks.
               </p>
+              <p className="text-zinc-600 dark:text-zinc-400 mb-4">
+                *To try app without making a new account, use these credentials: username - demo, password: password*
+              </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="px-3 py-1 text-sm bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 rounded-full">
                   TypeScript
@@ -107,7 +110,10 @@ export default function ProjectsPage() {
                 </span>
               </div>
               <div className="flex gap-4">
-                <Link href="#" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">
+                <Link 
+                  href="https://ai-lifehub.xyz" 
+                  className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                >
                   View Project →
                 </Link>
                 <Link 
